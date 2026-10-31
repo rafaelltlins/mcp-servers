@@ -15,7 +15,7 @@ Um servidor MCP que permite a assistentes de IA usar a [OmniaKey](https://omniak
 
 ## Instalação
 
-> **Status:** este servidor ainda não está no npm e não foi testado na API real da OmniaKey, então os comandos `npx` abaixo só vão funcionar depois da publicação. Para experimentar agora, clone este repositório, execute `npm install` e `npm run build`, e configure seu cliente com `"command": "node"` e `"args": ["<caminho do repositório>/packages/mcp-omniakey/dist/index.js"]`.
+> **Status:** chat, geração de mídia, consulta de tarefas e downloads foram testados na API real da OmniaKey. `cancel_task` e arquivos locais como entrada só foram testados em uma API simulada. Este servidor ainda não está no npm, então os comandos `npx` abaixo só vão funcionar depois da publicação. Para experimentar agora, clone este repositório, execute `npm install` e `npm run build`, e configure seu cliente com `"command": "node"` e `"args": ["<caminho do repositório>/packages/mcp-omniakey/dist/index.js"]`.
 
 **Claude Code**
 

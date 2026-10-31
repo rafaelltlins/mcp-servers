@@ -15,7 +15,7 @@ An MCP server that lets AI assistants use [OmniaKey](https://omniakey.com): chat
 
 ## Installation
 
-> **Status:** this server isn't on npm yet and hasn't been tested against the live OmniaKey API, so the `npx` commands below won't work until it is published. To try it now, clone this repository, run `npm install` and `npm run build`, and configure your client with `"command": "node"` and `"args": ["<repository path>/packages/mcp-omniakey/dist/index.js"]`.
+> **Status:** chat, media generation, task status and downloads have been tested against the live OmniaKey API. `cancel_task` and local files as input have only been tested against a simulated API. This server isn't on npm yet, so the `npx` commands below won't work until it is published. To try it now, clone this repository, run `npm install` and `npm run build`, and configure your client with `"command": "node"` and `"args": ["<repository path>/packages/mcp-omniakey/dist/index.js"]`.
 
 **Claude Code**
 
