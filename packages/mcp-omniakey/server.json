@@ -8,6 +8,14 @@
     "source": "github",
     "subfolder": "packages/mcp-omniakey"
   },
+  "websiteUrl": "https://github.com/rafaelltlins/mcp-servers/tree/main/packages/mcp-omniakey",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/rafaelltlins/mcp-servers/main/packages/mcp-omniakey/assets/icon.png",
+      "mimeType": "image/png",
+      "sizes": ["96x96"]
+    }
+  ],
   "version": "0.1.0",
   "packages": [
     {

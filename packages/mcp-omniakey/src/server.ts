@@ -10,6 +10,8 @@ import { resolveMediaSource, saveAsset } from "./files.js";
 
 const { version } = createRequire(import.meta.url)("../package.json") as { version: string };
 
+const WEBSITE_URL = "https://github.com/rafaelltlins/mcp-servers/tree/main/packages/mcp-omniakey";
+const ICON_URL = "https://raw.githubusercontent.com/rafaelltlins/mcp-servers/main/packages/mcp-omniakey/assets/icon.png";
 const DEFAULT_OUTPUT_DIR = "omniakey-output";
 // Many MCP clients cancel a tool call after 60 seconds, so waiting stops before that.
 const MAX_WAIT_SECONDS = 50;
@@ -62,7 +64,13 @@ function describeTask(task: MediaTask): CallToolResult {
 }
 
 export function createServer(client: OmniaKeyClient, options: ServerOptions = {}): McpServer {
-  const server = new McpServer({ name: "mcp-omniakey", version });
+  const server = new McpServer({
+    name: "mcp-omniakey",
+    title: "OmniaKey (unofficial)",
+    version,
+    websiteUrl: WEBSITE_URL,
+    icons: [{ src: ICON_URL, mimeType: "image/png", sizes: ["96x96"] }],
+  });
   const outputDir = options.outputDir?.trim() || DEFAULT_OUTPUT_DIR;
 
   /** Submits a task. Once it exists, a polling failure must not lose its id. */

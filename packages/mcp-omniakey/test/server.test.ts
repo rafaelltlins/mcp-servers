@@ -123,6 +123,13 @@ describe("mcp-omniakey", () => {
     ]);
   });
 
+  it("exposes its title and icon to clients", async () => {
+    await connect();
+    const info = mcp.getServerVersion();
+    expect(info?.title).toBe("OmniaKey (unofficial)");
+    expect(info?.icons?.[0]?.src).toMatch(/^https:\/\/raw\.githubusercontent\.com\/.*icon\.png$/);
+  });
+
   it("starts without a key and explains how to get one when a tool is called", async () => {
     await connect("");
     const { data, isError } = await call("list_models", {});
