@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Registry login tokens and generated media
+.mcpregistry_*
+omniakey-output/
+
+.DS_Store
+Thumbs.db

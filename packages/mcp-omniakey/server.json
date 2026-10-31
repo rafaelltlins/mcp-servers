@@ -1,0 +1,37 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.rafaelltlins/mcp-omniakey",
+  "title": "OmniaKey (unofficial)",
+  "description": "Unofficial OmniaKey server: chat plus image, video and audio generation with local downloads.",
+  "repository": {
+    "url": "https://github.com/rafaelltlins/mcp-servers",
+    "source": "github",
+    "subfolder": "packages/mcp-omniakey"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@rafaelltlins/mcp-omniakey",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "OMNIAKEY_API_KEY",
+          "description": "Your OmniaKey API key.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "OMNIAKEY_OUTPUT_DIR",
+          "description": "Default folder for downloaded media. Defaults to ./omniakey-output.",
+          "isRequired": false,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}

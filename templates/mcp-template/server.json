@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.rafaelltlins/mcp-template",
+  "title": "Template",
+  "description": "Replace with one sentence about this server.",
+  "repository": {
+    "url": "https://github.com/rafaelltlins/mcp-servers",
+    "source": "github",
+    "subfolder": "packages/mcp-template"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@rafaelltlins/mcp-template",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

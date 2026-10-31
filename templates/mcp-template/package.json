@@ -1,0 +1,50 @@
+{
+  "name": "@rafaelltlins/mcp-template",
+  "version": "0.1.0",
+  "description": "Replace with one sentence about this server.",
+  "mcpName": "io.github.rafaelltlins/mcp-template",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-template": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.pt-BR.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelltlins/mcp-servers.git",
+    "directory": "packages/mcp-template"
+  },
+  "homepage": "https://github.com/rafaelltlins/mcp-servers/tree/main/packages/mcp-template#readme",
+  "bugs": "https://github.com/rafaelltlins/mcp-servers/issues",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

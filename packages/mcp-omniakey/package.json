@@ -1,0 +1,54 @@
+{
+  "name": "@rafaelltlins/mcp-omniakey",
+  "version": "0.1.0",
+  "description": "Unofficial MCP server for OmniaKey: chat plus image, video and audio generation.",
+  "mcpName": "io.github.rafaelltlins/mcp-omniakey",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "mcp-omniakey": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.pt-BR.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "omniakey",
+    "image-generation",
+    "video-generation",
+    "audio-generation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelltlins/mcp-servers.git",
+    "directory": "packages/mcp-omniakey"
+  },
+  "homepage": "https://github.com/rafaelltlins/mcp-servers/tree/main/packages/mcp-omniakey#readme",
+  "bugs": "https://github.com/rafaelltlins/mcp-servers/issues",
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.0"
+  }
+}

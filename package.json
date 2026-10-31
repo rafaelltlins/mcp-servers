@@ -1,0 +1,28 @@
+{
+  "name": "mcp-servers",
+  "private": true,
+  "description": "A collection of independent Model Context Protocol (MCP) servers.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelltlins/mcp-servers.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "check": "npm run typecheck && npm run build && npm run test",
+    "changeset": "changeset",
+    "version": "changeset version && node scripts/sync-server-json.mjs && npm install --package-lock-only",
+    "release": "npm run check && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^3.0.3"
+  }
+}
